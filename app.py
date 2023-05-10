@@ -89,7 +89,7 @@ with stats_container:
                 apd_us1 = st.number_input ("AP diameter (mm)", 0, 45)
                 sfu_us1 = st.number_input ("SFU Grading", 0, 4)
                 max_dilation1 = st.number_input ("maximum ureter diameter", 0, 50)
-                proxtodistalratio = ((st.number_input ("Proximal ureter diameter (mm)", 0, 50))/(st.number_input ("Distal ureter diameter (mm)", 0, 50)))
+                proxtodistalratio = st.number_input ("Proximal ureter diameter (mm)", 0, 50)/st.number_input ("Distal ureter diameter (mm)", 0, 50)
                 ProxDistal = ((st.number_input ("Proximal ureter diameter (mm)", 0, 50))-(st.number_input ("Distal ureter diameter (mm)", 0, 50)))
                 distal_diameter_us1 = st.number_input ("Distal ureter diameter (mm)", 0, 50)
             
