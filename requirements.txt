@@ -4,7 +4,8 @@ numpy==1.23.2
 pandas==1.4.3
 streamlit==1.13.0
 xgboost==1.6.2
+altair
 scikit-learn
 vega
 vega_datasets
-altair
+vegalite
