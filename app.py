@@ -76,7 +76,7 @@ with stats_container:
             
                 st.subheader ('Clinical Characteristics')
                 age_baseline = st.number_input ("Age (days)", 0, 30)
-                gender = st.radio ("Sex", tuple(Gender_dict.keys))
+                gender = st.radio ("Sex", tuple(Gender_dict.keys()))
                 prenatal_hn = st.radio ("Weight (kg)", tuple(feature_dict.keys()))
                 laterality = st.radio ("Side of hydronephrosis", tuple(Laterality_dict.keys()))
                 st.caption('If bilateral, ultrasound findings should be focused on the side with worse hydroureter.')
