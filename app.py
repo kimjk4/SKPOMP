@@ -133,9 +133,9 @@ with stats_container:
 
             with about_container4:
                 with col_8:
-                    st.write('The final model had a area under receiving operating characteristics curve (AUROC) of 0.780 and area under precision-recall curve (AUPRC) of 0.742. The model had excellent negative predictive value and specificity of 89%.')
+                    st.write('The final model had a area under receiving operating characteristics curve (AUROC) of 0.817 and area under precision-recall curve (AUPRC) of 0.736 with f1 score of 0.700. The model had excellent negative predictive value (0.923) and specificity (0.857).')
                     st.write('The tool was last updated on May 10, 2023 and may be updated with new data as they become available.')
-                    st.caption('For questions regarding model hyperparameters and training, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
+                    st.caption('For questions regarding model hyperparameters and development, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
                 with col_9:
                     st.image('ROC.png')
                     st.image('PRC.png')
