@@ -138,7 +138,7 @@ with stats_container:
                     st.caption('For questions regarding model hyperparameters and training, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
                 with col_9:
                     st.image('ROC.png')
-                    st.image('PRC.png'')
+                    st.image('PRC.png')
                     st.image('CM.png')
                     st.caption('Final model evaluation using ROC, PRC, and confusion matrix.')
             
