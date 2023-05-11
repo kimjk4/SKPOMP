@@ -18,9 +18,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 
-feature_names_best = ['age_baseline', 'gender', 'prenatal_hn', 'laterality', 'length_1_1',
-       'apd_us1', 'sfu_us1', 'max_dilation1', 'proxtodistalratio',
-       'ProxDistal', 'distal_diameter_us1']
+feature_names_best = ['age_baseline', 'gender', 'laterality', 'length_1_1',
+       'apd_us1', 'sfu_us1', 'max_dilation1']
 
 Gender_dict = {"Male":1, "Female":2}
 Laterality_dict = {"Left":1, "Right":2, "Bilateral":3}
@@ -77,7 +76,6 @@ with stats_container:
                 st.subheader ('Clinical Characteristics')
                 age_baseline = st.number_input ("Age (days)", 0, 30)
                 gender = st.radio ("Sex", tuple(Gender_dict.keys()))
-                prenatal_hn = st.radio ("Weight (kg)", tuple(feature_dict.keys()))
                 laterality = st.radio ("Side of hydronephrosis", tuple(Laterality_dict.keys()))
                 st.caption('If bilateral, ultrasound findings should be focused on the side with worse hydroureter.')
 
@@ -88,16 +86,12 @@ with stats_container:
                 length_1_1 = st.number_input ("Length (mm)", 0, 110)
                 apd_us1 = st.number_input ("AP diameter (mm)", 0, 45)
                 sfu_us1 = st.number_input ("SFU Grading", 0, 4)
-                max_dilation1 = st.number_input ("maximum ureter diameter", 0, 50)
-                distal_diameter_us1 = st.number_input ("Distal ureter diameter (mm)", 1, 50)
-                proximal_diameter_us1 = st.number_input ("Proximal ureter diameter (mm)", 1, 50)
-                proxtodistalratio = proximal_diameter_us1/distal_diameter_us1
-                ProxDistal =  proximal_diameter_us1- distal_diameter_us1
+                max_dilation1 = st.number_input ("maximum ureter diameter (mm)", 0, 50)
             
             with col_3:
 
-                feature_list = [age_baseline, get_value(gender, Gender_dict), get_value(prenatal_hn, feature_dict), get_value(laterality, Laterality_dict), length_1_1, 
-                                apd_us1, sfu_us1, max_dilation1,  proxtodistalratio, ProxDistal, distal_diameter_us1]
+                feature_list = [age_baseline, get_value(gender, Gender_dict),  get_value(laterality, Laterality_dict), length_1_1, 
+                                apd_us1, sfu_us1, max_dilation1]
                 single_sample = np.array(feature_list).reshape(1,-1)
 
                 model_choice = st.selectbox("Select Model", ["Calibrated logistic regression"])
@@ -144,7 +138,7 @@ with stats_container:
                     st.caption('For questions regarding model hyperparameters and training, please contact Jin Kyu (Justin) Kim at: jjk.kim@mail.utoronto.ca')
                 with col_9:
                     st.image('ROC.png')
-                    st.image('PRC.png')
+                    st.image('PRC.png'')
                     st.image('CM.png')
                     st.caption('Final model evaluation using ROC, PRC, and confusion matrix.')
             
