@@ -62,7 +62,7 @@ col_10, col_11 = st.columns(2)
 
 with header_container:
     st.title('SK-POMP: SickKids Primary obstructive megaureter prediction')
-    st.write("This is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
+    st.caption("This is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
     st.caption('This model is currently in development. Further external validation is required before wide use in clinical decision making. Please use at your own risk.')
 
 with stats_container:
