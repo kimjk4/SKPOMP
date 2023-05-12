@@ -60,6 +60,9 @@ col_6, col_7 = st.columns(2)
 col_8, col_9 = st.columns(2)
 col_10, col_11 = st.columns(2)
 
+activity = st.selectbox ('Select Activity', ['Prediction', 'About'])
+
+
 with header_container:
     st.title('SK-POMP: SickKids Primary obstructive megaureter prediction')
     st.caption("This is a web app to predict the likelihood of identfying obstruction on MAG3 scan (defined as t1/2 > 20 minutes) based on an infant's baseline clinical and ultrasound characteristics.")
@@ -68,7 +71,6 @@ with header_container:
 with stats_container:
     def main():
         
-        activity = st.selectbox ('Select Activity', ['Prediction', 'About'])
         if activity == 'Prediction':
             
             with col_1:
