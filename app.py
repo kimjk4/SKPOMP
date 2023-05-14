@@ -133,7 +133,7 @@ with stats_container:
                     st.write('Following this, we developed a logistic regression model with L2 regularization and was able to calibrate it to provide better prediction.')
                 with col_7:
                     st.image('calibration.png')
-                    st.caption('Calibration curve of the logistic regression model (pre- and post-calibration).')
+                    st.caption('Calibration curve of the logistic regression model (pre- and post-calibration). Calibration slope = 1.09')
 
             with about_container4:
                 with col_8:
