@@ -110,7 +110,7 @@ with stats_container:
 
                     st.write("Prediction: ", prediction)
                     st.write("Probability of obstruction on MAG3: ", proba)
-                    st.caption("The decision curve analysis suggests that patients with ~10-65% likelihood of obstruction are likely to benefit from this model."
+                    st.caption("The decision curve analysis suggests that patients with ~10-65% likelihood of obstruction are likely to benefit from this model.")
                     st.image('DecisionCurve.png')
 
         if activity == 'About':
